@@ -7,22 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C23F3957AA4FC5438AD0E40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23FB0E44DDFCBF864D112F /* ViewController.swift */; };
+		4C23F6BC7A1BCDD5710EC16C /* JobApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23F335093FF40B43D2C262 /* JobApplicationService.swift */; };
 		4C23F6F5DC4505E59C68625D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23FCFB5D8F43A57C80488A /* AppDelegate.swift */; };
-		4C23F815A0D5717F6E959B0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23F63F7E1CB1DCE3731F16 /* ViewController.swift */; };
-		4C23F8BD46B89B2538B31298 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C23F9D806B9092B512A61A6 /* Main.storyboard */; };
+		4C23F8A334B0DB5A1A7912D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C23F7FB08153E2DADD2D63E /* Main.storyboard */; };
+		4C23FBAA1643D42F8E93E16D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23F4D2DFECB85D59F3CD8B /* R.generated.swift */; };
+		4C23FC62F96C0940DA7D4822 /* JobApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23F4C49154C818CFD1AF01 /* JobApplication.swift */; };
+		4C23FC972B0345B612768A08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C23FE9BBE31208CFC4405FF /* LaunchScreen.storyboard */; };
+		4C23FDDE10A878C15964B0F2 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23FECA9B928596CCBA2671 /* Settings.swift */; };
 		4C23FDE2625E618F733AAE8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C23F237780C0EAA9F7098EF /* Assets.xcassets */; };
-		4C23FECA8E70DF57E1184D86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C23FBBB3928B85F217F60B7 /* LaunchScreen.storyboard */; };
+		4C23FE898E9A4BF872CA1D64 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23FD8A6A1BE5A0578222B7 /* ViewModel.swift */; };
 		BAAEC64F920FB6D7134BFA5E /* Pods_Job_Applicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F105CCB0E51E771015CCE79 /* Pods_Job_Applicator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4C23F237780C0EAA9F7098EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4C23F2D4837C0647EDF90290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		4C23F2F1B720FE082381FCDD /* Job Applicator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Job Applicator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C23F5078ABCC5CC5A3E194C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4C23F63F7E1CB1DCE3731F16 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4C23F8C64C9884159C066EFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4C23F335093FF40B43D2C262 /* JobApplicationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobApplicationService.swift; sourceTree = "<group>"; };
+		4C23F4C49154C818CFD1AF01 /* JobApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobApplication.swift; sourceTree = "<group>"; };
+		4C23F4D2DFECB85D59F3CD8B /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		4C23F5F27E2CB2594D0CE9DE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		4C23F7FB08153E2DADD2D63E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4C23FB0E44DDFCBF864D112F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4C23FCFB5D8F43A57C80488A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4C23FD8A6A1BE5A0578222B7 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		4C23FE9BBE31208CFC4405FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4C23FECA9B928596CCBA2671 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		4F105CCB0E51E771015CCE79 /* Pods_Job_Applicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Job_Applicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DBD53F0A6BF9E9F729108B1 /* Pods-Job Applicator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Job Applicator.release.xcconfig"; path = "Pods/Target Support Files/Pods-Job Applicator/Pods-Job Applicator.release.xcconfig"; sourceTree = "<group>"; };
 		E0C4EB5F1B46ABA77C1C2BCD /* Pods-Job Applicator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Job Applicator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Job Applicator/Pods-Job Applicator.debug.xcconfig"; sourceTree = "<group>"; };
@@ -40,6 +50,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C23F3717F0192F4D32C6AA8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4C23FE9BBE31208CFC4405FF /* LaunchScreen.storyboard */,
+				4C23F7FB08153E2DADD2D63E /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		4C23F58800288B256C04985E = {
 			isa = PBXGroup;
 			children = (
@@ -50,17 +69,60 @@
 			);
 			sourceTree = "<group>";
 		};
+		4C23F6BAA79E5DA41150064B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4C23F6C4B58A6AB7A2B53094 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4C23FD8A6A1BE5A0578222B7 /* ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		4C23FA59B8BC06E42A75F089 /* Job Applicator */ = {
 			isa = PBXGroup;
 			children = (
-				4C23F2D4837C0647EDF90290 /* Info.plist */,
 				4C23F237780C0EAA9F7098EF /* Assets.xcassets */,
-				4C23FBBB3928B85F217F60B7 /* LaunchScreen.storyboard */,
 				4C23FCFB5D8F43A57C80488A /* AppDelegate.swift */,
-				4C23F9D806B9092B512A61A6 /* Main.storyboard */,
-				4C23F63F7E1CB1DCE3731F16 /* ViewController.swift */,
+				4C23FCEFFB29BDA2D5D560F2 /* ViewControllers */,
+				4C23F3717F0192F4D32C6AA8 /* Storyboards */,
+				4C23FD94ECE3D91EF4E4D02A /* Classes */,
+				4C23FEAFA810286E9260F127 /* Config */,
+				4C23F6BAA79E5DA41150064B /* Extensions */,
+				4C23FCAF6667E9019B92D57C /* Enums */,
+				4C23F6C4B58A6AB7A2B53094 /* ViewModels */,
 			);
 			path = "Job Applicator";
+			sourceTree = "<group>";
+		};
+		4C23FCAF6667E9019B92D57C /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				4C23F335093FF40B43D2C262 /* JobApplicationService.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		4C23FCEFFB29BDA2D5D560F2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4C23FB0E44DDFCBF864D112F /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4C23FD94ECE3D91EF4E4D02A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4C23F4C49154C818CFD1AF01 /* JobApplication.swift */,
+				4C23FECA9B928596CCBA2671 /* Settings.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		4C23FE5568C52F98349A2E20 /* Products */ = {
@@ -69,6 +131,15 @@
 				4C23F2F1B720FE082381FCDD /* Job Applicator.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4C23FEAFA810286E9260F127 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				4C23F4D2DFECB85D59F3CD8B /* R.generated.swift */,
+				4C23F5F27E2CB2594D0CE9DE /* Info.plist */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		D932AB1CC751FD951DE8CB76 /* Pods */ = {
@@ -147,8 +218,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C23FDE2625E618F733AAE8B /* Assets.xcassets in Resources */,
-				4C23FECA8E70DF57E1184D86 /* LaunchScreen.storyboard in Resources */,
-				4C23F8BD46B89B2538B31298 /* Main.storyboard in Resources */,
+				4C23FC972B0345B612768A08 /* LaunchScreen.storyboard in Resources */,
+				4C23F8A334B0DB5A1A7912D2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +252,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Job Applicator/Pods-Job Applicator-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/NSObject+Rx/NSObject_Rx.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
@@ -193,6 +265,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSObject_Rx.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
@@ -212,16 +285,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"$TEMP_DIR/rswift-lastrun",
 			);
 			name = "R swift";
-			outputFileListPaths = (
-			);
 			outputPaths = (
-				$SRCROOT/R.generated.swift,
+				"$SRCROOT/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -235,30 +304,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C23F6F5DC4505E59C68625D /* AppDelegate.swift in Sources */,
-				4C23F815A0D5717F6E959B0C /* ViewController.swift in Sources */,
+				4C23F3957AA4FC5438AD0E40 /* ViewController.swift in Sources */,
+				4C23FBAA1643D42F8E93E16D /* R.generated.swift in Sources */,
+				4C23F6BC7A1BCDD5710EC16C /* JobApplicationService.swift in Sources */,
+				4C23FC62F96C0940DA7D4822 /* JobApplication.swift in Sources */,
+				4C23FDDE10A878C15964B0F2 /* Settings.swift in Sources */,
+				4C23FE898E9A4BF872CA1D64 /* ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		4C23F9D806B9092B512A61A6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4C23F8C64C9884159C066EFF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		4C23FBBB3928B85F217F60B7 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4C23F5078ABCC5CC5A3E194C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4C23F30A16FBDC61E49B9F8D /* Release */ = {
@@ -266,8 +321,9 @@
 			baseConfigurationReference = 7DBD53F0A6BF9E9F729108B1 /* Pods-Job Applicator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BASE_URL = "http://localhost:8080/jobs";
 				DEVELOPMENT_TEAM = YC3TEJQ893;
-				INFOPLIST_FILE = "Job Applicator/Info.plist";
+				INFOPLIST_FILE = "Job Applicator/Config/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bulbstudios.Job-Applicator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -342,8 +398,9 @@
 			baseConfigurationReference = E0C4EB5F1B46ABA77C1C2BCD /* Pods-Job Applicator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BASE_URL = "http://localhost:8080/jobs";
 				DEVELOPMENT_TEAM = YC3TEJQ893;
-				INFOPLIST_FILE = "Job Applicator/Info.plist";
+				INFOPLIST_FILE = "Job Applicator/Config/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bulbstudios.Job-Applicator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
