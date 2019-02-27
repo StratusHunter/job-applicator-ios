@@ -5,7 +5,7 @@
 
 import UIKit
 
-class JobApplication: Codable {
+struct JobApplication: Codable {
 
     var name: String
     var email: String

@@ -7,15 +7,42 @@
 //
 
 import UIKit
-
+import RxSwift
+import Moya
+import NSObject_Rx
 
 class ViewController: UIViewController {
 
+    private let viewModel = ViewModel()
+
+    private let service = MoyaProvider<JobApplicationService>()
+
     override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+
+        super.viewDidLoad()
+
+        performRequest()
     }
 
+    private func performRequest() {
 
+        let jobApplication = JobApplication(name: "Terence",
+                                            email: "stratushunter@gmail.com",
+                                            about: "iOS and Android Developer",
+                                            urls: ["https://github.com/StratusHunter"],
+                                            teams: ["android", "ios"])
 
+        viewModel.performApplyRequest(application: jobApplication)
+                .subscribe { event in
+
+                    switch (event) {
+
+                        case .success(let application):
+                            print("application successful: \(application)")
+                        case .error(let error):
+                            print("request error: \(error)")
+                    }
+                }
+                .disposed(by: rx.disposeBag)
+    }
 }
