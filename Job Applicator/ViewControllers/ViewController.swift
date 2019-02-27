@@ -10,11 +10,11 @@ import UIKit
 import RxSwift
 import Moya
 import NSObject_Rx
+import CocoaLumberjack
 
 class ViewController: UIViewController {
 
     private let viewModel = ViewModel()
-
     private let service = MoyaProvider<JobApplicationService>()
 
     override func viewDidLoad() {
@@ -38,9 +38,9 @@ class ViewController: UIViewController {
                     switch (event) {
 
                         case .success(let application):
-                            print("application successful: \(application)")
+                            DDLogInfo("application successful: \(application)")
                         case .error(let error):
-                            print("request error: \(error)")
+                            DDLogWarn("request error: \(error)")
                     }
                 }
                 .disposed(by: rx.disposeBag)
