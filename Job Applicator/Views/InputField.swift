@@ -24,8 +24,11 @@ class InputField: UITextField {
     private func setup() {
 
         borderStyle = .none
+
         backgroundColor = R.color.darkJazzBlue()?.withAlphaComponent(0.5)
         textColor = UIColor.white
+        tintColor = UIColor.white
+
         font = Fonts.INPUT_FONT
     }
 

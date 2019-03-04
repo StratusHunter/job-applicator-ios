@@ -21,10 +21,15 @@ class InputView: UITextView {
 
     private func setup() {
 
+        indicatorStyle = .white
+
         textContainer.lineFragmentPadding = 0
         textContainerInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+
         backgroundColor = R.color.darkJazzBlue()?.withAlphaComponent(0.5)
         textColor = UIColor.white
+        tintColor = UIColor.white
+
         font = Fonts.INPUT_FONT
     }
 }
