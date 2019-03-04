@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C23F01CF5F81768980AA499 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23FBF53B2F8428AB14DA0E /* PrimaryButton.swift */; };
 		4C23F03E96DE555A1B6610B3 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23F20B028D05B9272717B5 /* InputView.swift */; };
 		4C23F0FBE11BEA30EDECDF67 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23FFE40A1FEADBB9A7FB60 /* Fonts.swift */; };
 		4C23F3957AA4FC5438AD0E40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23FB0E44DDFCBF864D112F /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 		4C23F7FB08153E2DADD2D63E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4C23FAE398DAAC70F053ECB3 /* InputField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
 		4C23FB0E44DDFCBF864D112F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4C23FBF53B2F8428AB14DA0E /* PrimaryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		4C23FCFB5D8F43A57C80488A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C23FD8A6A1BE5A0578222B7 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		4C23FE9BBE31208CFC4405FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				4C23F24CC69CCA17C65AE049 /* HeadingLabel.swift */,
 				4C23FAE398DAAC70F053ECB3 /* InputField.swift */,
 				4C23F20B028D05B9272717B5 /* InputView.swift */,
+				4C23FBF53B2F8428AB14DA0E /* PrimaryButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				4C23F0FBE11BEA30EDECDF67 /* Fonts.swift in Sources */,
 				4C23FD8D74EEF27ADA66E40D /* InputField.swift in Sources */,
 				4C23F03E96DE555A1B6610B3 /* InputView.swift in Sources */,
+				4C23F01CF5F81768980AA499 /* PrimaryButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,4 +12,6 @@ struct Fonts {
 
     static let HEADING_FONT = UIFont(name: ROCKWELL_BOLD, size: 17)
     static let INPUT_FONT = UIFont(name: ROCKWELL, size: 17)
+    static let BUTTON_FONT = UIFont(name: ROCKWELL_BOLD, size: 17)
+
 }
