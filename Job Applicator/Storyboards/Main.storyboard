@@ -151,6 +151,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="aboutView" destination="RkL-7y-AI6" id="3gg-wa-1Yk"/>
+                        <outlet property="emailField" destination="1ev-ON-cuy" id="W5o-BF-rXK"/>
+                        <outlet property="nameField" destination="XID-qX-h8C" id="wP3-5t-Ep7"/>
+                        <outlet property="submitButton" destination="WrB-Hg-IKs" id="xbF-i6-2b5"/>
+                        <outlet property="teamField" destination="8lH-be-kNm" id="Kwu-cO-xuH"/>
+                        <outlet property="urlView" destination="L1s-n0-acq" id="51H-Cy-NbB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

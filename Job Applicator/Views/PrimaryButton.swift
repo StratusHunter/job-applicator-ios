@@ -19,6 +19,15 @@ class PrimaryButton: UIButton {
         setup()
     }
 
+    override var isEnabled: Bool {
+        get { return super.isEnabled }
+        set {
+
+            super.isEnabled = newValue
+            alpha = (isEnabled) ? 1.0 : 0.5
+        }
+    }
+
     private func setup() {
 
         backgroundColor = UIColor.white
