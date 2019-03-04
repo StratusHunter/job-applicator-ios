@@ -86,7 +86,7 @@ class ViewController: UIViewController {
             let alertController = UIAlertController(title: response, message: nil, preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: R.string.content.ok(), style: .default, handler: nil))
             alertController.view.tintColor = R.color.darkJazzBlue()
-            self?.present(alertController, animated: true) { [alertController] in alertController.view.tintColor = R.color.darkJazzBlue() }
+            present(alertController, animated: true) { [alertController] in alertController.view.tintColor = R.color.darkJazzBlue() }
         }
     }
 }
