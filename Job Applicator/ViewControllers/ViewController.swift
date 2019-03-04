@@ -35,9 +35,8 @@ class ViewController: UIViewController {
 
     private func setupValidationObserver() {
 
-        Observable.combineLatest(nameField.rx.text.orEmpty, emailField.rx.text.orEmpty,
-                                 teamField.rx.text.orEmpty, aboutView.rx.text.orEmpty,
-                                 urlView.rx.text.orEmpty)
+        Observable.combineLatest(nameField.rx.text.orEmpty, emailField.rx.text.orEmpty, teamField.rx.text.orEmpty,
+                                 aboutView.rx.text.orEmpty, urlView.rx.text.orEmpty)
                 .debounce(0.3, scheduler: MainScheduler.instance)
                 .map { [viewModel] (name, email, team, about, url) in
 
