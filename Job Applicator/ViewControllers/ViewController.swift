@@ -63,16 +63,30 @@ class ViewController: UIViewController {
 
                     return viewModel.performApplyRequest(application: application)
                 }
-                .subscribe(onNext: {
-
-                    switch ($0) {
-
-                        case .success(let application):
-                            DDLogInfo("Application successful: \(application)")
-                        case .error(let error):
-                            DDLogWarn("Application error: \(error)")
-                    }
-                })
+                .subscribe(onNext: { [weak self] in self?.handleApplicationResponse(result: $0) })
                 .disposed(by: rx.disposeBag)
+    }
+
+    private func handleApplicationResponse(result: APIResult<JobApplication>) {
+
+        var response: String? = nil
+
+        switch (result) {
+
+            case .success(let application):
+                response = R.string.content.applicationReceived()
+                DDLogInfo("\(response!): \(application)")
+            case .error(let error):
+                response = R.string.content.applicationError()
+                DDLogWarn("\(response!): \(error)")
+        }
+
+        if let response = response {
+
+            let alertController = UIAlertController(title: response, message: nil, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: R.string.content.ok(), style: .default, handler: nil))
+            alertController.view.tintColor = R.color.darkJazzBlue()
+            self?.present(alertController, animated: true) { [alertController] in alertController.view.tintColor = R.color.darkJazzBlue() }
+        }
     }
 }

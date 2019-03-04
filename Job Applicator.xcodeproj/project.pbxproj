@@ -17,6 +17,7 @@
 		4C23F6F5DC4505E59C68625D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23FCFB5D8F43A57C80488A /* AppDelegate.swift */; };
 		4C23F8360050BC19BDE11779 /* APIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23F9611DCB9DF8CFDACB36 /* APIResult.swift */; };
 		4C23F8A334B0DB5A1A7912D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C23F7FB08153E2DADD2D63E /* Main.storyboard */; };
+		4C23FA398E6B1F51F574F64E /* Content.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C23F1DBDC70DA057E896FD2 /* Content.strings */; };
 		4C23FB9CCA80C36AEC233C41 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23F677606A4C8C405B3C54 /* Error.swift */; };
 		4C23FBAA1643D42F8E93E16D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23F4D2DFECB85D59F3CD8B /* R.generated.swift */; };
 		4C23FC62F96C0940DA7D4822 /* JobApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23F4C49154C818CFD1AF01 /* JobApplication.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C23F1DBDC70DA057E896FD2 /* Content.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Content.strings; sourceTree = "<group>"; };
 		4C23F20B028D05B9272717B5 /* InputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		4C23F237780C0EAA9F7098EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C23F24CC69CCA17C65AE049 /* HeadingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadingLabel.swift; sourceTree = "<group>"; };
@@ -103,6 +105,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		4C23F7395C1B7E95D64BB2C0 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				4C23F1DBDC70DA057E896FD2 /* Content.strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
 		4C23F7DE72E8D53BFE3A78A5 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +135,7 @@
 				4C23F6C4B58A6AB7A2B53094 /* ViewModels */,
 				4C23FCA3C71C592450A60655 /* Views */,
 				4C23F7DE72E8D53BFE3A78A5 /* Constants */,
+				4C23F7395C1B7E95D64BB2C0 /* Strings */,
 			);
 			path = "Job Applicator";
 			sourceTree = "<group>";
@@ -263,6 +274,7 @@
 				4C23FDE2625E618F733AAE8B /* Assets.xcassets in Resources */,
 				4C23FC972B0345B612768A08 /* LaunchScreen.storyboard in Resources */,
 				4C23F8A334B0DB5A1A7912D2 /* Main.storyboard in Resources */,
+				4C23FA398E6B1F51F574F64E /* Content.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

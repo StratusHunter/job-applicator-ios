@@ -1,0 +1,10 @@
+/* 
+  Content.strings
+  Job Applicator
+
+  Created by Terence Baker on 2019-03-04.
+    Copyright © 2019 Bulb Studios Ltd. All rights reserved.
+*/
+"applicationReceived"="Application successfully received";
+"applicationError"="Application request failed";
+"ok"="OK";
