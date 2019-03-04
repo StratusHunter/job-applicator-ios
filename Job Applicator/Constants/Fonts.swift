@@ -3,7 +3,7 @@
 // Copyright (c) 2019 Bulb Studios Ltd. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct Fonts {
 

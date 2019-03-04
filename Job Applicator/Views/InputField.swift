@@ -5,7 +5,7 @@
 
 import UIKit
 
-class HeadingLabel: UILabel {
+class InputField: UITextField {
 
     override init(frame: CGRect) {
 
@@ -21,13 +21,9 @@ class HeadingLabel: UILabel {
 
     private func setup() {
 
+        borderStyle = .none
+        backgroundColor = R.color.darkJazzBlue()?.withAlphaComponent(0.5)
         textColor = UIColor.white
-        font = Fonts.HEADING_FONT
-    }
-
-    override func drawText(in rect: CGRect) {
-
-        let edgeInset = UIEdgeInsets(top: 2, left: 0, bottom: 0, right: 0) //Rockwell seems to clip the top by 2px
-        super.drawText(in: rect.inset(by: edgeInset))
+        font = Fonts.INPUT_FONT
     }
 }
