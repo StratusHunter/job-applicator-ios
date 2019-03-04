@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,40 +29,76 @@
                                             <constraint firstAttribute="height" id="oxW-KE-LbA"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0WB-5m-RgB">
-                                        <rect key="frame" x="5" y="5" width="310" height="559"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0WB-5m-RgB">
+                                        <rect key="frame" x="16" y="16" width="288" height="627.5"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XID-qX-h8C">
-                                                <rect key="frame" x="0.0" y="0.0" width="310" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4M-Xn-xvU" customClass="HeadingLabel" customModule="Job_Applicator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XID-qX-h8C">
+                                                <rect key="frame" x="0.0" y="30.5" width="288" height="45"/>
+                                                <color key="backgroundColor" red="0.066666666666666666" green="0.27058823529411763" blue="0.74117647058823533" alpha="0.50115047089041098" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="TMx-bS-8rz"/>
+                                                </constraints>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="namePhonePad" textContentType="name"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="rect" keyPath="edgeInsets">
+                                                        <rect key="value" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ev-ON-cuy">
-                                                <rect key="frame" x="0.0" y="35" width="310" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbf-19-2TZ" customClass="HeadingLabel" customModule="Job_Applicator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="85.5" width="288" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ev-ON-cuy">
+                                                <rect key="frame" x="0.0" y="116" width="288" height="45"/>
+                                                <color key="backgroundColor" red="0.066666666666666666" green="0.27058823529411763" blue="0.74117647058823533" alpha="0.50115047089041098" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="FX2-nu-2ZH"/>
+                                                </constraints>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Teams (Comma separated)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8lH-be-kNm">
-                                                <rect key="frame" x="0.0" y="70" width="310" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teams (Comma separated)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytv-nv-3NX" customClass="HeadingLabel" customModule="Job_Applicator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="171" width="288" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8lH-be-kNm">
+                                                <rect key="frame" x="0.0" y="201.5" width="288" height="45"/>
+                                                <color key="backgroundColor" red="0.066666666666666666" green="0.27058823529411763" blue="0.74117647058823533" alpha="0.50115047089041098" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="5Va-hE-Nns"/>
+                                                </constraints>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Hq-pH-twN">
-                                                <rect key="frame" x="0.0" y="105" width="310" height="19.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Hq-pH-twN" customClass="HeadingLabel" customModule="Job_Applicator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="256.5" width="288" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RkL-7y-AI6">
-                                                <rect key="frame" x="0.0" y="129.5" width="310" height="200"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="0.0" y="287" width="288" height="150"/>
+                                                <color key="backgroundColor" red="0.066666666666666666" green="0.27058823529411763" blue="0.74117647058823533" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="200" id="0YU-Hc-HOP"/>
+                                                    <constraint firstAttribute="height" constant="150" id="0YU-Hc-HOP"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -69,19 +106,20 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URLs (one per line)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zF6-TY-RtR">
-                                                <rect key="frame" x="0.0" y="334.5" width="310" height="19.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URLs (one per line)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zF6-TY-RtR" customClass="HeadingLabel" customModule="Job_Applicator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="447" width="288" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="L1s-n0-acq">
-                                                <rect key="frame" x="0.0" y="359" width="310" height="200"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="0.0" y="477.5" width="288" height="150"/>
+                                                <color key="backgroundColor" red="0.066666666666666666" green="0.27058823529411763" blue="0.74117647058823533" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="200" id="Dg1-fj-zcc"/>
+                                                    <constraint firstAttribute="height" constant="150" id="Dg1-fj-zcc"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -92,12 +130,11 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <constraints>
-                                    <constraint firstItem="0WB-5m-RgB" firstAttribute="top" secondItem="oq8-1Q-mFU" secondAttribute="top" constant="5" id="3GS-6Q-mkM"/>
-                                    <constraint firstAttribute="bottom" secondItem="0WB-5m-RgB" secondAttribute="bottom" constant="5" id="BoZ-xt-SmR"/>
-                                    <constraint firstItem="0WB-5m-RgB" firstAttribute="leading" secondItem="oq8-1Q-mFU" secondAttribute="leading" constant="5" id="FzY-Iv-woT"/>
-                                    <constraint firstAttribute="trailing" secondItem="0WB-5m-RgB" secondAttribute="trailing" constant="5" id="MPu-ZY-Zub"/>
+                                    <constraint firstItem="0WB-5m-RgB" firstAttribute="top" secondItem="oq8-1Q-mFU" secondAttribute="top" constant="16" id="3GS-6Q-mkM"/>
+                                    <constraint firstAttribute="bottom" secondItem="0WB-5m-RgB" secondAttribute="bottom" constant="16" id="BoZ-xt-SmR"/>
+                                    <constraint firstItem="0WB-5m-RgB" firstAttribute="leading" secondItem="oq8-1Q-mFU" secondAttribute="leading" constant="16" id="FzY-Iv-woT"/>
+                                    <constraint firstAttribute="trailing" secondItem="0WB-5m-RgB" secondAttribute="trailing" constant="16" id="MPu-ZY-Zub"/>
                                     <constraint firstItem="LLY-BC-NUM" firstAttribute="leading" secondItem="oq8-1Q-mFU" secondAttribute="leading" id="NIj-Zc-o7H"/>
                                     <constraint firstItem="LLY-BC-NUM" firstAttribute="top" secondItem="oq8-1Q-mFU" secondAttribute="top" id="VrQ-pS-xwk"/>
                                     <constraint firstItem="LLY-BC-NUM" firstAttribute="width" secondItem="oq8-1Q-mFU" secondAttribute="width" id="XgA-Jw-NO9"/>
@@ -105,7 +142,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="JazzBlue"/>
                         <constraints>
                             <constraint firstItem="oq8-1Q-mFU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="548-7w-5FJ"/>
                             <constraint firstAttribute="bottom" secondItem="oq8-1Q-mFU" secondAttribute="bottom" id="8Xz-wX-NFL"/>
@@ -119,4 +156,9 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="JazzBlue">
+            <color red="0.066666666666666666" green="0.45490196078431372" blue="0.74117647058823533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C23F0FBE11BEA30EDECDF67 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23FFE40A1FEADBB9A7FB60 /* Fonts.swift */; };
 		4C23F3957AA4FC5438AD0E40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23FB0E44DDFCBF864D112F /* ViewController.swift */; };
+		4C23F3A4B0052D7BF38D373C /* HeadingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23F24CC69CCA17C65AE049 /* HeadingLabel.swift */; };
 		4C23F6BC7A1BCDD5710EC16C /* JobApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23F335093FF40B43D2C262 /* JobApplicationService.swift */; };
 		4C23F6F5DC4505E59C68625D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23FCFB5D8F43A57C80488A /* AppDelegate.swift */; };
 		4C23F8A334B0DB5A1A7912D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C23F7FB08153E2DADD2D63E /* Main.storyboard */; };
@@ -22,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		4C23F237780C0EAA9F7098EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C23F24CC69CCA17C65AE049 /* HeadingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadingLabel.swift; sourceTree = "<group>"; };
 		4C23F2F1B720FE082381FCDD /* Job Applicator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Job Applicator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C23F335093FF40B43D2C262 /* JobApplicationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobApplicationService.swift; sourceTree = "<group>"; };
 		4C23F4C49154C818CFD1AF01 /* JobApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobApplication.swift; sourceTree = "<group>"; };
@@ -33,6 +36,7 @@
 		4C23FD8A6A1BE5A0578222B7 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		4C23FE9BBE31208CFC4405FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C23FECA9B928596CCBA2671 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		4C23FFE40A1FEADBB9A7FB60 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		4F105CCB0E51E771015CCE79 /* Pods_Job_Applicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Job_Applicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DBD53F0A6BF9E9F729108B1 /* Pods-Job Applicator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Job Applicator.release.xcconfig"; path = "Pods/Target Support Files/Pods-Job Applicator/Pods-Job Applicator.release.xcconfig"; sourceTree = "<group>"; };
 		E0C4EB5F1B46ABA77C1C2BCD /* Pods-Job Applicator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Job Applicator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Job Applicator/Pods-Job Applicator.debug.xcconfig"; sourceTree = "<group>"; };
@@ -84,6 +88,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		4C23F7DE72E8D53BFE3A78A5 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				4C23FFE40A1FEADBB9A7FB60 /* Fonts.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		4C23FA59B8BC06E42A75F089 /* Job Applicator */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,8 +108,18 @@
 				4C23F6BAA79E5DA41150064B /* Extensions */,
 				4C23FCAF6667E9019B92D57C /* Enums */,
 				4C23F6C4B58A6AB7A2B53094 /* ViewModels */,
+				4C23FCA3C71C592450A60655 /* Views */,
+				4C23F7DE72E8D53BFE3A78A5 /* Constants */,
 			);
 			path = "Job Applicator";
+			sourceTree = "<group>";
+		};
+		4C23FCA3C71C592450A60655 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4C23F24CC69CCA17C65AE049 /* HeadingLabel.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4C23FCAF6667E9019B92D57C /* Enums */ = {
@@ -290,7 +312,7 @@
 			);
 			name = "R swift";
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -310,6 +332,8 @@
 				4C23FC62F96C0940DA7D4822 /* JobApplication.swift in Sources */,
 				4C23FDDE10A878C15964B0F2 /* Settings.swift in Sources */,
 				4C23FE898E9A4BF872CA1D64 /* ViewModel.swift in Sources */,
+				4C23F3A4B0052D7BF38D373C /* HeadingLabel.swift in Sources */,
+				4C23F0FBE11BEA30EDECDF67 /* Fonts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
