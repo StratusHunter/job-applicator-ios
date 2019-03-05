@@ -15,6 +15,8 @@ import CocoaLumberjack
 
 class ViewController: UIViewController {
 
+    typealias InputData = (String, String, String, String, String)
+
     private let viewModel = ViewModel()
     private let service = MoyaProvider<JobApplicationService>()
 
@@ -29,14 +31,17 @@ class ViewController: UIViewController {
 
         super.viewDidLoad()
 
-        setupValidationObserver()
-        setupButtonObserver()
+        let inputDataObservable = Observable.combineLatest(nameField.rx.text.orEmpty, emailField.rx.text.orEmpty, teamField.rx.text.orEmpty,
+                                                           aboutView.rx.text.orEmpty, urlView.rx.text.orEmpty)
+                .share(replay: 1, scope: .forever)
+
+        setupValidationObserver(input: inputDataObservable)
+        setupButtonObserver(input: inputDataObservable)
     }
 
-    private func setupValidationObserver() {
+    private func setupValidationObserver(input inputDataObservable: Observable<InputData>) {
 
-        Observable.combineLatest(nameField.rx.text.orEmpty, emailField.rx.text.orEmpty, teamField.rx.text.orEmpty,
-                                 aboutView.rx.text.orEmpty, urlView.rx.text.orEmpty)
+        inputDataObservable
                 .debounce(0.3, scheduler: MainScheduler.instance)
                 .map { [viewModel] (name, email, team, about, url) in
 
@@ -46,21 +51,14 @@ class ViewController: UIViewController {
                 .disposed(by: rx.disposeBag)
     }
 
-    private func setupButtonObserver() {
+    private func setupButtonObserver(input inputDataObservable: Observable<InputData>) {
 
         submitButton.rx.tap
                 .debounce(0.3, scheduler: MainScheduler.instance)
-                .flatMapLatest { [weak self] _ -> Single<APIResult<JobApplication>> in
+                .withLatestFrom(inputDataObservable)
+                .flatMapLatest { [viewModel] (name, email, team, about, url) -> Single<APIResult<JobApplication>> in
 
-                    guard let strongSelf = self else { return Single.just(APIResult.error(ApplicationError.selfNil)) }
-
-                    let viewModel = strongSelf.viewModel
-                    let application = viewModel.createApplication(name: strongSelf.nameField.text ?? "",
-                                                                  email: strongSelf.emailField.text ?? "",
-                                                                  teams: strongSelf.teamField.text ?? "",
-                                                                  about: strongSelf.aboutView.text ?? "",
-                                                                  urls: strongSelf.urlView.text ?? "")
-
+                    let application = viewModel.createApplication(name: name, email: email, teams: team, about: about, urls: url)
                     return viewModel.performApplyRequest(application: application)
                 }
                 .subscribe(onNext: { [weak self] in self?.handleApplicationResponse(result: $0) })
