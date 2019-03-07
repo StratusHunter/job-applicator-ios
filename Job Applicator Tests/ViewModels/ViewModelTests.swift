@@ -38,6 +38,11 @@ class ViewModelTests: XCTestCase {
         XCTAssertFalse(viewModel.validateApplication(name: aName, email: email, teams: "", about: about, urls: url))
         XCTAssertFalse(viewModel.validateApplication(name: aName, email: email, teams: team, about: "", urls: url))
         XCTAssertFalse(viewModel.validateApplication(name: aName, email: email, teams: team, about: about, urls: ""))
+
+        //Incorrect Values
+        XCTAssertFalse(viewModel.validateApplication(name: aName, email: "Not an email", teams: team, about: about, urls: url))
+        XCTAssertFalse(viewModel.validateApplication(name: aName, email: email, teams: "Not a team", about: about, urls: url))
+        XCTAssertFalse(viewModel.validateApplication(name: aName, email: email, teams: team, about: about, urls: "Not a url"))
     }
 
     func testJobApplication() {
