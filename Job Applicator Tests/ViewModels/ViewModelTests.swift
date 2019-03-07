@@ -1,11 +1,13 @@
 //
 // Created by Terence Baker on 2019-03-07.
-// Copyright (c) 2019 Bulb Studios Ltd. All rights reserved.
 //
 
 import XCTest
 @testable import Job_Applicator
+
 import Moya
+import RxBlocking
+import RxTest
 
 class ViewModelTests: XCTestCase {
 
@@ -54,5 +56,24 @@ class ViewModelTests: XCTestCase {
         //Array counts
         XCTAssertEqual(application.teams.count, 2)
         XCTAssertEqual(application.urls.count, 2)
+    }
+
+    func testPerformRequest() throws {
+
+        let application = JobApplication(name: aName, email: email, about: about, urls: [url], teams: [team])
+        let response = try! viewModel.performApplyRequest(application: application).toBlocking().first()!
+
+        switch (response) {
+            case .success(let app):
+
+                XCTAssertEqual(app.name, application.name)
+                XCTAssertEqual(app.email, application.email)
+                XCTAssertEqual(app.about, application.about)
+                XCTAssertEqual(app.teams.first, application.teams.first)
+                XCTAssertEqual(app.urls.first, application.urls.first)
+            case .error:
+
+                XCTFail()
+        }
     }
 }

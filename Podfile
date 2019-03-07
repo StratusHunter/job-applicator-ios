@@ -20,4 +20,6 @@ target 'Job Applicator Tests' do
 
   use_frameworks!
   common_pods
+  pod 'RxTest', '4.4.1'
+  pod 'RxBlocking', '4.4.1'
 end
