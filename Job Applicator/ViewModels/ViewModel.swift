@@ -9,7 +9,12 @@ import RxSwift
 
 struct ViewModel {
 
-    private let service = MoyaProvider<JobApplicationService>()
+    private let service: MoyaProvider<JobApplicationService>
+
+    init(service: MoyaProvider<JobApplicationService> = MoyaProvider<JobApplicationService>()) {
+
+        self.service = service
+    }
 
     private func createTeamList(team: String) -> [Team?] {
 
