@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     typealias InputData = (String, String, String, String, String)
 
     private let viewModel = ViewModel()
-    private let service = MoyaProvider<JobApplicationService>()
 
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
