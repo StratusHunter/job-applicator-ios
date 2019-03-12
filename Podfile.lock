@@ -15,7 +15,7 @@ PODS:
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.0)
   - Result (4.1.0)
-  - RxAtomic (4.4.1)
+  - RxAtomic (4.4.2)
   - RxBlocking (4.4.1):
     - RxAtomic (~> 4.4)
     - RxSwift (~> 4.0)
@@ -63,13 +63,13 @@ SPEC CHECKSUMS:
   R.swift: 81455d81467763cbd3f4d79d938d05f4ac4c0228
   R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
-  RxAtomic: f8d6adc1ccb87a767811269e4875887bc74dbf19
+  RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
   RxBlocking: 5508e90d36ca2304632dc9378ece4e9b5d4bf656
   RxCocoa: 2f35a76bf8887872e28a1914112395b11b8e0e64
   RxSwift: 92fcf68dfef21f3e2ab1965363d9e7b3d787597e
   RxTest: f8e548755ca3c7502dc41c7d3b28802c90115a38
   TPKeyboardAvoiding: cb69d5ddbe90ce0170e4bc2db1e5e41d4a3ad9a4
 
-PODFILE CHECKSUM: f2c8d0c0b2c48ad063b5bf467b44cd288f1aeb39
+PODFILE CHECKSUM: 633bbc3131ed7ec181f3c5a0f95dc6941443d381
 
 COCOAPODS: 1.5.3
