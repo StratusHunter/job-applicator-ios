@@ -27,14 +27,14 @@ class ViewModelTests: XCTestCase {
 
     }
 
-    func test_validateApplication_withValidData_returnTrue() {
+    func test_validateApplication_withValidData_assertTrue() {
 
         let validData = viewModel.validateApplication(name: aName, email: email, teams: team, about: about, urls: url)
 
         XCTAssertTrue(validData, "Valid data no longer considered valid")
     }
 
-    func test_validateApplication_withMissingData_returnFalse() {
+    func test_validateApplication_withMissingData_assertFalse() {
 
         let nameMissing = viewModel.validateApplication(name: "", email: email, teams: team, about: about, urls: url)
         let emailMissing = viewModel.validateApplication(name: aName, email: "", teams: team, about: about, urls: url)
@@ -49,7 +49,7 @@ class ViewModelTests: XCTestCase {
         XCTAssertFalse(urlMissing, "URLs should not be empty")
     }
 
-    func test_validationApplication_withIncorrectData_returnFalse() {
+    func test_validationApplication_withIncorrectData_assertFalse() {
 
         let emailInvalid = viewModel.validateApplication(name: aName, email: "Not an email", teams: team, about: about, urls: url)
         let teamInvalid = viewModel.validateApplication(name: aName, email: email, teams: "Not a team", about: about, urls: url)
@@ -60,27 +60,37 @@ class ViewModelTests: XCTestCase {
         XCTAssertFalse(urlInvalid, "URL validation failing")
     }
 
-    func testJobApplication() {
+    func test_createApplication_validatePropertyMapping_assertEqual() {
 
-        let application = viewModel.createApplication(name: aName, email: email,
-                                                      teams: "\(team), \(Team.ios.rawValue)", about: about,
+        let application = viewModel.createApplication(name: aName,
+                                                      email: email,
+                                                      teams: team,
+                                                      about: about,
+                                                      urls: url)
+
+        XCTAssertEqual(application.name, aName, "Name property not mapped correctly")
+        XCTAssertEqual(application.email, email, "Email property not mapped correctly")
+        XCTAssertEqual(application.about, about, "About property not mapped correctly")
+        XCTAssertEqual(application.teams.first, team, "Team property not mapped correctly")
+        XCTAssertEqual(application.urls.first, url, "URL property not mapped correctly")
+    }
+
+    func test_createApplication_validateArrayPopulation_assertEqual() {
+
+        let application = viewModel.createApplication(name: aName,
+                                                      email: email,
+                                                      teams: "\(team), \(Team.ios.rawValue)",
+                                                      about: about,
                                                       urls: "\(url)\n\(url)")
 
-        //Property Mapping
-        XCTAssertEqual(application.name, aName)
-        XCTAssertEqual(application.email, email)
-        XCTAssertEqual(application.about, about)
-        XCTAssertEqual(application.teams.first, team)
-        XCTAssertEqual(application.urls.first, url)
-
-        //Array counts
-        XCTAssertEqual(application.teams.count, 2)
-        XCTAssertEqual(application.urls.count, 2)
+        XCTAssertEqual(application.teams.count, 2, "Unexpected team array size")
+        XCTAssertEqual(application.urls.count, 2, "Unexpected URL array size")
     }
 
     func testPerformRequest() throws {
 
         let application = JobApplication(name: aName, email: email, about: about, urls: [url], teams: [team])
+
         let response = try! viewModel.performApplyRequest(application: application).toBlocking().first()!
 
         switch (response) {
