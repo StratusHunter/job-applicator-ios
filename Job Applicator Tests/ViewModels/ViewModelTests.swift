@@ -27,22 +27,37 @@ class ViewModelTests: XCTestCase {
 
     }
 
-    func testValidationApplication() {
+    func test_validateApplication_withValidData_returnTrue() {
 
-        //Valid
-        XCTAssertTrue(viewModel.validateApplication(name: aName, email: email, teams: team, about: about, urls: url))
+        let validData = viewModel.validateApplication(name: aName, email: email, teams: team, about: about, urls: url)
 
-        ///Missing Properties
-        XCTAssertFalse(viewModel.validateApplication(name: "", email: email, teams: team, about: about, urls: url))
-        XCTAssertFalse(viewModel.validateApplication(name: aName, email: "", teams: team, about: about, urls: url))
-        XCTAssertFalse(viewModel.validateApplication(name: aName, email: email, teams: "", about: about, urls: url))
-        XCTAssertFalse(viewModel.validateApplication(name: aName, email: email, teams: team, about: "", urls: url))
-        XCTAssertFalse(viewModel.validateApplication(name: aName, email: email, teams: team, about: about, urls: ""))
+        XCTAssertTrue(validData, "Valid data no longer considered valid")
+    }
 
-        //Incorrect Values
-        XCTAssertFalse(viewModel.validateApplication(name: aName, email: "Not an email", teams: team, about: about, urls: url))
-        XCTAssertFalse(viewModel.validateApplication(name: aName, email: email, teams: "Not a team", about: about, urls: url))
-        XCTAssertFalse(viewModel.validateApplication(name: aName, email: email, teams: team, about: about, urls: "Not a url"))
+    func test_validateApplication_withMissingData_returnFalse() {
+
+        let nameMissing = viewModel.validateApplication(name: "", email: email, teams: team, about: about, urls: url)
+        let emailMissing = viewModel.validateApplication(name: aName, email: "", teams: team, about: about, urls: url)
+        let teamMissing = viewModel.validateApplication(name: aName, email: email, teams: "", about: about, urls: url)
+        let aboutMissing = viewModel.validateApplication(name: aName, email: email, teams: team, about: "", urls: url)
+        let urlMissing = viewModel.validateApplication(name: aName, email: email, teams: team, about: about, urls: "")
+
+        XCTAssertFalse(nameMissing, "Name should not be empty")
+        XCTAssertFalse(emailMissing, "Email should not be empty")
+        XCTAssertFalse(teamMissing, "Team should not be empty")
+        XCTAssertFalse(aboutMissing, "About should not be empty")
+        XCTAssertFalse(urlMissing, "URLs should not be empty")
+    }
+
+    func test_validationApplication_withIncorrectData_returnFalse() {
+
+        let emailInvalid = viewModel.validateApplication(name: aName, email: "Not an email", teams: team, about: about, urls: url)
+        let teamInvalid = viewModel.validateApplication(name: aName, email: email, teams: "Not a team", about: about, urls: url)
+        let urlInvalid = viewModel.validateApplication(name: aName, email: email, teams: team, about: about, urls: "Not a url")
+
+        XCTAssertFalse(emailInvalid, "Email validation failing")
+        XCTAssertFalse(teamInvalid, "Team validation failing")
+        XCTAssertFalse(urlInvalid, "URL validation failing")
     }
 
     func testJobApplication() {
